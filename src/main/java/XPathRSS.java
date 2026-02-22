@@ -44,7 +44,7 @@ public class XPathRSS {
             XPathExpression descExpr = xpath.compile(".//description"); // Note the './/' for relative search
             NodeList items = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
             if (items.getLength() == 0) {
-                throw new Exception("No item");
+                throw new Exception("No items");
             }
 
             for (int i = 0; i < items.getLength(); i++) {
