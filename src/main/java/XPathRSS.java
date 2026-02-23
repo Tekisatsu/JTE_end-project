@@ -23,7 +23,7 @@ public class XPathRSS {
             XPathExpression exprChannel = xpath.compile("//channel");
             NodeList itemsChannel = (NodeList) exprChannel.evaluate(doc, XPathConstants.NODESET);
             if (itemsChannel.getLength() == 0) {
-                throw new Exception("Empty channel");
+                throw new Exception("No channel");
             }
             for (int i = 0; i < itemsChannel.getLength(); i++) {
                 Node item = itemsChannel.item(i);
